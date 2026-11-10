@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:focusable="true"
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <!-- Card Container -->
+    <FrameLayout
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+        <!-- Luminous Radiant Halo Glow (Behind the user icon) -->
+        <ImageView
+            android:id="@+id/card_halo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.0"
+            android:scaleType="fitCenter" />
+
+        <!-- User's Exact Icon Image -->
+        <ImageView
+            android:id="@+id/card_art"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:scaleType="fitCenter" />
+
+    </FrameLayout>
+
+    <!-- Dynamic Focus-Only Water Reflection (Hidden by default, blooms only when focused) -->
+    <ImageView
+        android:id="@+id/card_reflection"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:layout_marginTop="2dp"
+        android:alpha="0.0"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

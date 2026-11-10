@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <!-- Starburst vertical/horizontal flare -->
+    <path
+        android:fillColor="#00D2FF"
+        android:pathData="M18,4 L20,15 L31,18 L20,21 L18,32 L16,21 L5,18 L16,15 Z" />
+    <path
+        android:fillColor="#9D00FF"
+        android:pathData="M18,8 L19.5,15.5 L27,18 L19.5,20.5 L18,28 L16.5,20.5 L9,18 L16.5,15.5 Z" />
+    <!-- Center white spark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,12 L19,16.5 L23.5,18 L19,19.5 L18,24 L17,19.5 L12.5,18 L17,16.5 Z" />
+</vector>

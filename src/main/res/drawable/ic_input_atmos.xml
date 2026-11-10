@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Left D (Facing Right) -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M44,24 H26 c-6.6,0 -12,5.4 -12,12 v24 c0,6.6 5.4,12 12,12 h18 v-48 z M34,60 H26 c-2.2,0 -4,-1.8 -4,-4 V40 c0,-2.2 1.8,-4 4,-4 h8 v24 z" />
+    <!-- Right D (Facing Left) -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M52,24 h18 c6.6,0 12,5.4 12,12 v24 c0,6.6 -5.4,12 -12,12 H52 v-48 z M62,60 h8 c2.2,0 4,-1.8 4,-4 V40 c0,-2.2 -1.8,-4 -4,-4 h-8 v24 z" />
+    <!-- Subtle Atmos Arc Bars -->
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M24,14 C38,8 58,8 72,14 L70,18 C58,13 38,13 26,18 Z M20,82 C38,88 58,88 76,82 L74,78 C58,83 38,83 22,78 Z" />
+</vector>

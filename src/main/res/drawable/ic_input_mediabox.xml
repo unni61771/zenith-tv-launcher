@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Media Box body -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M6,16 C6,13.8 7.8,12 10,12 L38,12 C40.2,12 42,13.8 42,16 L42,32 C42,34.2 40.2,36 38,36 L10,36 C7.8,36 6,34.2 6,32 Z" />
+    <!-- Beveled top accent line -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M10,14 L38,14 C39.1,14 40,14.9 40,16 L40,18 L8,18 L8,16 C8,14.9 8.9,14 10,14 Z" />
+    <!-- Power / Status LED dot -->
+    <path
+        android:fillColor="#0EA5E9"
+        android:pathData="M35,27 A2,2 0 1,1 35,26.99 Z" />
+    <!-- Media Play Icon in Center -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M21,21 L29,25.5 L21,30 Z" />
+</vector>

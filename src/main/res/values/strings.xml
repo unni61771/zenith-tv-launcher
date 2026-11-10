@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zenith TV Launcher</string>
+    <string name="accessibility_service_desc">Zenith TV Home Button Handler. Seamlessly brings up your clean ad-free home screen on Home button presses without modifying or disabling system packages.</string>
+</resources>

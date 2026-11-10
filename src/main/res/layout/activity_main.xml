@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mountains">
+
+    <!-- Subtle Ambient Reflection (Behind bottom cards only, keeping top mountains 100% crisp & pure) -->
+    <View
+        android:id="@+id/view_ambient_glow"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_gravity="bottom"
+        android:alpha="0.20" />
+
+    <!-- Main Screen Content -->
+    <LinearLayout
+        android:id="@+id/layout_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingStart="44dp"
+        android:paddingEnd="44dp"
+        android:paddingTop="26dp"
+        android:paddingBottom="16dp">
+
+        <!-- Top Navigation Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Home Tab with Cyan Underline -->
+            <LinearLayout
+                android:id="@+id/tab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:focusable="true"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_tab_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp"
+                    android:text="🏠  Home" />
+
+                <View
+                    android:id="@+id/indicator_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:background="#38BDF8" />
+
+            </LinearLayout>
+
+            <!-- All Apps Tab -->
+            <LinearLayout
+                android:id="@+id/tab_all_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:focusable="true"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_tab_all_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="4dp"
+                    android:text="⊞  All Apps" />
+
+                <View
+                    android:id="@+id/indicator_all_apps"
+                    android:layout_width="match_parent"
+                    android:layout_height="2.5dp"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Wi-Fi Status Symbol -->
+            <TextView
+                android:id="@+id/tv_wifi_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#E2E8F0"
+                android:textSize="18sp"
+                android:text="📶" />
+
+            <!-- Settings Button -->
+            <TextView
+                android:id="@+id/btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:padding="6dp"
+                android:textColor="#E2E8F0"
+                android:textSize="19sp"
+                android:text="⚙" />
+
+            <!-- Stock Home Shortcut Button -->
+            <TextView
+                android:id="@+id/btn_stock_google_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:padding="6dp"
+                android:textColor="#FB7185"
+                android:textSize="17sp"
+                android:text="⚡" />
+
+            <!-- Stacked Time and Date -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/tv_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="7:30 PM" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#94A3B8"
+                    android:textSize="11sp"
+                    android:text="Tue, Nov 10" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- 1. APPS SECTION HEADER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="⊞  Apps" />
+
+        <!-- 1. APPS CARDS ROW (Floating) -->
+        <LinearLayout
+            android:id="@+id/container_curated_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+        <!-- 2. INPUTS SECTION HEADER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="⊟  Inputs" />
+
+        <!-- 2. INPUTS CARDS ROW (Floating Panoramic) -->
+        <LinearLayout
+            android:id="@+id/container_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Bottom Footer with Attribution -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="#64748B"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="Developed by Unni Ampadi with Antigravity ♥" />
+
+    </LinearLayout>
+
+    <!-- 3. All Apps Fullscreen Drawer / Overlay -->
+    <LinearLayout
+        android:id="@+id/overlay_all_apps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F00A0F1D"
+        android:orientation="vertical"
+        android:paddingStart="44dp"
+        android:paddingEnd="44dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="⊞ All Installed Applications" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/btn_close_all_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_cyan_glow"
+                android:focusable="true"
+                android:clickable="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="#38BDF8"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:text="✕ Close (or Press Back)" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+
+            <GridLayout
+                android:id="@+id/grid_all_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="6"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:alignmentMode="alignMargins" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

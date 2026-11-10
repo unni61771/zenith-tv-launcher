@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Antennas -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M16.5,12.5 L22,17.5 L24,17.5 L18.5,12.5 Z M31.5,12.5 L26,17.5 L24,17.5 L29.5,12.5 Z" />
+    <!-- TV Outer Body (Retro Warm Amber/Wood) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M8,17.5 C6.9,17.5 6,18.4 6,19.5 L6,37.5 C6,38.6 6.9,39.5 8,39.5 L40,39.5 C41.1,39.5 42,38.6 42,37.5 L42,19.5 C42,18.4 41.1,17.5 40,17.5 Z" />
+    <!-- TV Screen Display (Curved CRT) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M10,21 C9.4,21 9,21.4 9,22 L9,35 C9,35.6 9.4,36 10,36 L30,36 C30.6,36 31,35.6 31,35 L31,22 C31,21.4 30.6,21 30,21 Z" />
+    <!-- Screen Glare / Reflection -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M11,22 L24,22 L17,35 L11,35 Z" />
+    <!-- TV Control Knobs & Speaker Slits -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M35,24 A1.8,1.8 0 1,1 35,23.99 Z M35,29 A1.8,1.8 0 1,1 35,28.99 Z M33,33 H37 V34 H33 Z M33,35 H37 V36 H33 Z" />
+</vector>

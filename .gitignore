@@ -1,0 +1,6 @@
+build/
+*.apk
+*.log
+.DS_Store
+*.png
+!src/**/*.png
