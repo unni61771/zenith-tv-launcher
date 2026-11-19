@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
 
         // Top Action Buttons
         View btnSettings = findViewById(R.id.btn_settings);
-        btnSettings.setOnClickListener(v -> openSystemSettings());
+        btnSettings.setOnClickListener(v -> openTvQuickSettings());
         attachTabFocusAnimation(btnSettings);
 
         View btnStock = findViewById(R.id.btn_stock_google_tv);
@@ -503,6 +503,33 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     * Opens the TV Quick Settings / Dashboard overlay panel.
+     * This panel contains Picture Mode, 120Hz Game Mode (DLG/VRR), HDMI EDID 2.1 format, and Sound modes.
+     */
+    private void openTvQuickSettings() {
+        // Method 1: Google TV Notification / Dashboard panel toggle
+        try {
+            Intent intent = new Intent("android.app.action.TOGGLE_NOTIFICATION_HANDLER_PANEL");
+            intent.setPackage("com.google.android.apps.tv.launcherx");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return;
+        } catch (Exception ignored) {}
+
+        // Method 2: Google TV DashboardActivity explicit intent
+        try {
+            Intent intent = new Intent();
+            intent.setClassName("com.google.android.apps.tv.launcherx", "com.google.android.apps.tv.launcherx.dashboard.DashboardActivity");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return;
+        } catch (Exception ignored) {}
+
+        // Method 3: Standard Android TV Settings fallback
+        openSystemSettings();
+    }
+
     private void openSystemSettings() {
         try {
             Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
@@ -545,6 +572,25 @@ public class MainActivity extends Activity {
             }
             return true; // Consume Back so it never exits to stock launcher
         }
+
+        // Dedicated TV remote settings / dashboard / menu keys -> open TV Quick Settings
+        if (keyCode == KeyEvent.KEYCODE_SETTINGS
+                || keyCode == KeyEvent.KEYCODE_MENU
+                || keyCode == KeyEvent.KEYCODE_NOTIFICATION) {
+            openTvQuickSettings();
+            return true;
+        }
+
+        // TV Input switcher key on remote
+        if (keyCode == KeyEvent.KEYCODE_TV_INPUT) {
+            try {
+                Intent intent = new Intent("android.media.tv.action.VIEW_INPUTS");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                return true;
+            } catch (Exception ignored) {}
+        }
+
         return super.onKeyDown(keyCode, event);
     }
 
